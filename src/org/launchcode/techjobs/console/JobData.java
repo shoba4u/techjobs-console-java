@@ -99,11 +99,12 @@ public class JobData {
 
         for (HashMap<String, String> map : allJobs) {
 
-            String values = map.toString();
+            for(String values : map.values()) {
                 if ((values.toLowerCase()).contains(searchTerm.toLowerCase())) {
                     jobs.add(map);
                 }
 
+            }
         }
         return jobs;
 
